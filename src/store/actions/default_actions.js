@@ -1,11 +1,12 @@
 import * as actionTypes from './actionTypes';
 import axios from 'axios';
 
-const API_KEY = process.env.REACT_APP_API_ID;
+const API_KEY = process.env.REACT_APP_OPENWEATHERMAP_API;
+const API_GEOLOCATION_KEY = process.env.REACT_APP_OPENWEATHERMAP_API;
 
 export const currentLocation = () => {
     return dispatch => {
-        axios.get('http://ip-api.com/json')
+        axios.get('https://geolocation-db.com/json/'+ API_GEOLOCATION_KEY)
             .then(location => {
                 dispatch(currentWeather(location));
                 dispatch(localForecast(location));
@@ -18,8 +19,8 @@ export const currentLocation = () => {
 };
 
 export const currentWeather = (location) => {
-    const lat = location.data.lat;
-    const lon = location.data.lon;
+    const lat = location.data.latitude;
+    const lon = location.data.longitude;
     const CURRENT_URL = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
 
     return dispatch => {
@@ -35,8 +36,8 @@ export const currentWeather = (location) => {
 
 
 export const localForecast = (location) => {
-    const lat = location.data.lat;
-    const lon = location.data.lon;
+    const lat = location.data.latitude;
+    const lon = location.data.longitude;
 
     const FORECAST_URL = `http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&appid=${API_KEY}`;
 
@@ -52,8 +53,8 @@ export const localForecast = (location) => {
 }
 
 export const localHistory = (location) => {
-    const lat = location.data.lat;
-    const lon = location.data.lon;
+    const lat = location.data.latitude;
+    const lon = location.data.longitude;
 
     function sumarDias(fecha, dias) {
         fecha.setDate(fecha.getDate() + dias);

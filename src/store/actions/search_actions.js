@@ -1,7 +1,7 @@
 import * as actionTypes from './actionTypes';
 import axios from 'axios';
 
-const API_KEY = process.env.REACT_APP_API_ID;
+const API_KEY = process.env.REACT_APP_OPENWEATHERMAP_API;
 
 export const locationWeather = (cityName) => {
     
