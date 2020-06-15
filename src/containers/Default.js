@@ -17,8 +17,8 @@ class Default extends Component {
   render() {
     const setLocation = (
       this.props.error ?
-        <h1 className="text-center">Can't retrieve location</h1> :
-        <h1 className="text-center">{this.props.city} {this.props.country}</h1>
+        <h2 className="text-center">Can't retrieve location</h2> :
+        <h2 className="text-center">{this.props.city} {this.props.country}</h2>
     );
 
     return (
@@ -47,7 +47,7 @@ class Default extends Component {
             minTempF={this.props.minTempF}
             maxTempF={this.props.maxTempF}
           />
-          <h1 style={{color:'navy'}}>Forecast weather</h1>
+          <h2 style={{color:'navy'}}>Forecast weather</h2>
           <Forecast
             forecast={this.props.forecast}
             icon={this.props.icon}

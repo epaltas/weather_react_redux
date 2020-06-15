@@ -12,8 +12,8 @@ class SearchResult extends Component {
 
 		const setSearchLocation = (
 			this.props.error
-				? <h1 className="text-center">Enter a valid location</h1>
-				: <h1 className="text-center">{this.props.city} {this.props.country}</h1>
+				? <h2 className="text-center">Enter a valid location</h2>
+				: <h2 className="text-center">{this.props.city} {this.props.country}</h2>
 		);
 
 		const showDate = (
@@ -60,7 +60,7 @@ class SearchResult extends Component {
 				/>
 
 			</div>
-				<h1 style={{ color: 'red' }}>Historical weather by hours</h1>
+				<h2 style={{ color: 'red' }}>Historical weather by hours</h2>
 				<br />
 				<div>
 					<History
