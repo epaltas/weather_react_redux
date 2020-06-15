@@ -51,6 +51,7 @@ class SearchResult extends Component {
 				</h5>
 				<br />
 				{changeView}
+				<h1 style={{color:'navy'}}>Forecast weather</h1>
 				<Forecast
 					forecast={this.props.forecast}
 					icon={this.props.icon}
@@ -59,7 +60,7 @@ class SearchResult extends Component {
 				/>
 
 			</div>
-				<h1 style={{ color: 'red' }}>Historical weather data</h1>
+				<h1 style={{ color: 'red' }}>Historical weather by hours</h1>
 				<br />
 				<div>
 					<History

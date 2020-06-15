@@ -44,7 +44,7 @@ class SearchBar extends Component {
 						<option value="quito">Quito</option>
 						<option value="guayaquil">Guayaquil</option>
 						<option value="cuenca">Cuenca</option>
-						<option value="napo">Napo</option>
+						<option value="quevedo">Quevedo</option>
 						<option value="ibarra">Ibarra</option>
 						<option value="riobamba">Riobamba</option>
 						<option value="ambato">Ambato</option>

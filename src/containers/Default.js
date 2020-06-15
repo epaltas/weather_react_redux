@@ -31,6 +31,7 @@ class Default extends Component {
             <i><CurrentDate date={this.props.date} /></i>
           </h5>
           <br />
+
           <CurrentWeather
             error={this.props.error}
             description={this.props.description}
@@ -46,6 +47,7 @@ class Default extends Component {
             minTempF={this.props.minTempF}
             maxTempF={this.props.maxTempF}
           />
+          <h1 style={{color:'navy'}}>Forecast weather</h1>
           <Forecast
             forecast={this.props.forecast}
             icon={this.props.icon}
@@ -54,7 +56,7 @@ class Default extends Component {
           />
 
         </div>
-        <h1 style={{color:'red'}}>Historical weather data</h1>
+        <h1 style={{color:'red'}}>Historical weather by hours</h1>
         <br/>
         <div>
         <History
